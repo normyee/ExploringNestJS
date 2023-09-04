@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { CreateUserDto } from '../../domain/entities/user';
+import { User } from '../../domain/entities/user';
 
 global.users = ['person1', 'person2', 'person3'];
 
@@ -9,7 +9,7 @@ export class UsersService {
     return global.users;
   }
 
-  create(user: CreateUserDto) {
+  create(user: User) {
     global.users.push(user);
   }
 }
